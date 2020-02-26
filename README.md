@@ -3,7 +3,10 @@
 
   Con esta Api comprendemos el uso de hash para proteger las contraseñas de los usuarios de cualquie aplicación.
   la funcion de hash es una funcion que encripta la contraseña de forma irreversible.
-  **Registro de usuario nuevo**
+
+  <br/>
+
+**Registro de usuario nuevo**
   
   Este endpoint registra a los usuarios nuevos de una aplicación
 
@@ -15,9 +18,9 @@
 
   `Esta Api recibe llamadas del tipo POST el body que solicita es el siguiente`
 
- `{"username":"ejemplo","password":"ejemplo"}`
+      `{"username":"ejemplo","password":"ejemplo"}`
 
-*  **URL Params**
+
  
 * **Data Params**
 
