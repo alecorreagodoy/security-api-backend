@@ -1,6 +1,11 @@
-**Show User**
+**Aplicando Seguridad para input Usuarios**
 ----
-  Returns json data about a single user.
+
+  Con esta Api comprendemos el uso de hash para proteger las contraseñas de los usuarios de cualquie aplicación.
+  la funcion de hash es una funcion que encripta la contraseña de forma irreversible.
+  **Registro de usuario nuevo**
+  
+  Este endpoint registra a los usuarios nuevos de una aplicación
 
 * **URL**
 
@@ -8,7 +13,9 @@
 
 * **Method:**
 
-  `POST`
+  `Esta Api recibe llamadas del tipo POST el body que solicita es el siguiente`
+
+ `{"username":"ejemplo","password":"ejemplo"}`
 
 *  **URL Params**
  
@@ -19,7 +26,7 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** `{"username":"Alejandro","password":"$2b$13$biqlRoWYviL2qz0Yn0u5dORbSrEaTC6nlcx73OSougQn930lBQGyG"}`
+    **Content:** `{"menssage":"Usuario creado con exito!!!"}`
 
 * **Error Response:**
 
@@ -27,5 +34,38 @@
     **Content:** `{"message":"El body no es correcto..."}`
 
 
-* **Sample Call:**
+----
+**Loggin de usuario registrado**
+ este endpoint nos permite logear al usuario a una cuanta en la que ya esta registrado
+
+* **URL**
+
+ /loggin
+
+* **Method:**
+
+  `Esta Api recibe llamadas del tipo POST el body que solicita es el siguiente`
+
+ `{"username":"ejemplo","password":"ejemplo"}`
+
+
+*  **URL Params**
+ 
+* **Data Params**
+
+  None
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{"message":"Se ha loggeado con éxito!"}`
+
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{"message":"Error, usuario o contraseña no son correctas..."}`
+
+
+
+
 
